@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand color. -->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryVariant">#FFFFFF</color>
+    <color name="colorOnPrimary">#000000</color>
+
+    <!-- Secondary brand color. -->
+    <color name="colorSecondary">#C20114</color>
+    <color name="colorSecondaryVariant">#A40A1A</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
+
+    <color name="colorError">#FF0000</color>
+    <color name="colorOnError">#FFFFFF</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+
+    <!-- Status bar color. -->
+    <color name="colorStatusBar">@color/colorPrimaryVariant</color>
+
+    <!-- Actionbar or Toolbar colors-->
+    <color name="colorToolbarBackground">@color/colorPrimary</color>
+    <color name="colorHamburgerIcon">@color/colorOnPrimary</color>
+    <color name="colorBackIcon">@color/colorOnPrimary</color>
+    <color name="colorToolbarTitle">@color/colorOnPrimary</color>
+    <color name="colorToolbarSubTitle">@color/colorOnPrimary</color>
+
+    <!-- Badge count text colors -->
+    <color name="badgeInsideColor">#FF0000</color>
+    <color name="badgeBorderColor">#FFFFFF</color>
+
+    <!-- System Navigation bar colors. -->
+    <color name="colorNavBarDivider">@color/colorPrimary</color>
+    <color name="colorNavBar">@color/colorPrimary</color>
+    <!-- ======================================Common colors==================================== -->
+    <color name="colorLabel">#000000</color>
+    <color name="colorDesc">#ABA99B</color>
+    <color name="colorLink">#C20114</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="placeholder">#E3E3E3</color>
+    <color name="shimmer_placeholder">#dddddd</color>
+    <!-- ====================TextInputLayout & TextInputEditText colors========================= -->
+    <color name="boxBackgroundColor_TextInputLayout">#FFFFFF</color>
+
+    <color name="boxStrokeFocusedColor_TextInputLayout">#898989</color>
+    <color name="boxStrokeDisabledColor_TextInputLayout">#898989</color>
+    <color name="boxStrokeNormalColor_TextInputLayout">#898989</color>
+
+    <color name="hintActiveColor_TextInputLayout">#A5A5A5</color>
+    <color name="hintInactiveColor_TextInputLayout">#A5A5A5</color>
+
+    <color name="placeholderColor_TextInputLayout">#A5A5A5</color>
+
+    <color name="helperColor_TextInputLayout">#A5A5A5</color>
+
+    <color name="counterColor_TextInputLayout">#A5A5A5</color>
+    <color name="counterOverflowColor_TextInputLayout">@color/colorError</color>
+
+    <color name="prefixColor_TextInputLayout">#A5A5A5</color>
+    <color name="suffixColor_TextInputLayout">#A5A5A5</color>
+
+    <color name="colorText_TextInputEditText">#000000</color>
+    <color name="colorHint_TextInputEditText">#A5A5A5</color>
+
+    <color name="colorCursor">#000000</color>
+    <color name="colorCursorBubble">#000000</color>
+
+    <color name="colorEndIcon_TextInputLayout">#C20114</color>
+    <color name="colorStartIcon_TextInputLayout">#C20114</color>
+    <color name="colorPasswordToggle_TextInputLayout">#C20114</color>
+    <!-- ==================================MaterialButton colors================================ -->
+    <color name="colorRedButton_Text">#FFFFFF</color>
+    <color name="colorRedButton_UnPressed">#C20114</color>
+    <color name="colorRedButton_Pressed">#A40A1A</color>
+
+    <color name="colorRedButton_Outlined_Stroke">#C20114</color>
+    <color name="colorRedButton_Outlined_Text">#C20114</color>
+    <color name="colorRedButton_Outlined_UnPressed">#C20114</color>
+    <color name="colorRedButton_Outlined_Pressed">#C3C2C2</color>
+
+    <color name="colorGreenButton_Text">#FFFFFF</color>
+    <color name="colorGreenButton_UnPressed">#003E1F</color>
+    <color name="colorGreenButton_Pressed">#022313</color>
+
+    <color name="colorParakeetGreenButton_Text">#FFFFFF</color>
+    <color name="colorParakeetGreenButton_UnPressed">#1bad64</color>
+    <color name="colorParakeetGreenButton_Pressed">#1B9457</color>
+
+    <color name="colorGreenButton_Outlined_Stroke">#003E1F</color>
+    <color name="colorGreenButton_Outlined_Text">#003E1F</color>
+    <color name="colorGreenButton_Outlined_UnPressed">#003E1F</color>
+    <color name="colorGreenButton_Outlined_Pressed">#C3C2C2</color>
+    <!-- =======================================PinView colors================================== -->
+    <color name="pin_view_text_hint_default">#FFFFFF</color>
+    <color name="pin_view_text_selected">#000000</color>
+    <color name="pin_view_text_focused">#ABA99B</color>
+    <color name="pin_view_text_default">#ABA99B</color>
+    <color name="pin_view_line_selected">#ABA99B</color>
+    <color name="pin_view_line_focused">#ABA99B</color>
+    <color name="pin_view_line_default">#ABA99B</color>
+    <!-- ================================BottomNavigation colors================================ -->
+    <color name="bottom_navigation_view_background_solid">#000000</color>
+    <color name="bottom_navigation_view_background_stroke">#D3D3D3</color>
+
+    <color name="bottom_navigation_view_item_background_solid">#000000</color>
+    <color name="bottom_navigation_view_item_background_stroke">#FA952C</color>
+
+    <color name="bottom_navigation_view_icon_selected">#FF2850</color>
+    <color name="bottom_navigation_view_icon_unselected">#FFFFFF</color>
+
+    <color name="bottom_navigation_view_text_selected">#FF2850</color>
+    <color name="bottom_navigation_view_text_unselected">#FFFFFF</color>
+    <!-- ===========================Left Navigation Drawer colors=============================== -->
+    <color name="left_navigation_view_background_solid">#FFFFFF</color>
+    <color name="left_navigation_view_background_stroke">#FFFFFF</color>
+
+    <color name="left_navigation_view_item_background_solid">#FFFFFF</color>
+    <color name="left_navigation_view_item_background_stroke">#FF2850</color>
+
+    <color name="left_navigation_view_icon_selected">#FF2850</color>
+    <color name="left_navigation_view_icon_unselected">#000000</color>
+
+    <color name="left_navigation_view_text_selected">#FF2850</color>
+    <color name="left_navigation_view_text_unselected">#000000</color>
+
+    <color name="tag_green">#003E1F</color>
+    <color name="tag_red">#C20114</color>
+    <color name="tag_golden">#FFFFFF</color>
+
+    <!-- ==============================Date & Time slot colors================================== -->
+    <color name="date_time_disable_solid">#FFFFFF</color>
+    <color name="date_time_disable_stroke">#90C8C8C8</color>
+    <color name="date_time_disable_text">#90C8C8C8</color>
+
+    <color name="date_time_today_solid">#FFFFFF</color>
+    <color name="date_time_today_stroke">#90C8C8C8</color>
+    <color name="date_time_today_text">#90C8C8C8</color>
+
+    <color name="date_time_selected_solid">#000000</color>
+    <color name="date_time_selected_stroke">#000000</color>
+    <color name="date_time_selected_text">#FFFFFF</color>
+
+    <color name="date_time_unselected_solid">#FFFFFF</color>
+    <color name="date_time_unselected_stroke">#90C8C8C8</color>
+    <color name="date_time_unselected_text">#000000</color>
+
+    <color name="date_time_date_text">#000000</color>
+    <!-- ===================================StepView colors===================================== -->
+    <color name="order_step_view_selected_solid">#1BAD64</color>
+    <color name="order_step_view_selected_stroke">#1BAD64</color>
+    <color name="order_step_view_selected_icon">#FFFFFF</color>
+    <color name="order_step_view_selected_text">#1BAD64</color>
+    <color name="order_step_view_selected_line">#1BAD64</color>
+
+    <color name="order_step_view_unselected_solid">#FFFFFF</color>
+    <color name="order_step_view_unselected_stroke">#FFFFFF</color>
+    <color name="order_step_view_unselected_icon">#FFFFFF</color>
+    <color name="order_step_view_unselected_text">#FFFFFF</color>
+    <color name="order_step_view_unselected_line">#FFFFFF</color>
+
+    <color name="order_details_step_view_selected_solid">#003E1F</color>
+    <color name="order_details_step_view_selected_stroke">#003E1F</color>
+    <color name="order_details_step_view_selected_icon">#FFFFFF</color>
+    <color name="order_details_step_view_selected_text">#003E1F</color>
+    <color name="order_details_step_view_selected_line">#003E1F</color>
+
+    <color name="order_details_step_view_unselected_solid">#E9E9E9</color>
+    <color name="order_details_step_view_unselected_stroke">#E9E9E9</color>
+    <color name="order_details_step_view_unselected_icon">#605D66</color>
+    <color name="order_details_step_view_unselected_text">#605D66</color>
+    <color name="order_details_step_view_unselected_line">#E9E9E9</color>
+    <!-- ==============================Current Location colors================================== -->
+    <color name="current_location_selected_solid">#000000</color>
+    <color name="current_location_selected_stroke">#000000</color>
+    <color name="current_location_selected_text">#FFFFFF</color>
+    <color name="current_location_selected_text_tint">#FFFFFF</color>
+    <color name="current_location_selected_text_heading">#FFFFFF</color>
+
+    <color name="current_location_unselected_solid">#FFFFFF</color>
+    <color name="current_location_unselected_stroke">#90C8C8C8</color>
+    <color name="current_location_unselected_text">#605D66</color>
+    <color name="current_location_unselected_text_tint">#003E1F</color>
+    <color name="current_location_unselected_text_heading">#003E1F</color>
+
+    <!-- =============================Single Select Dialog colors=============================== -->
+    <color name="colorSingleSelectDialogToolbarBackground">#000000</color>
+    <color name="colorSingleSelectDialogToolbarTitle">#FFFFFF</color>
+
+    <color name="colorSingleSelectDialogCheckBoxDefault">#000000</color>
+    <color name="colorSingleSelectDialogCheckBoxSelect">#000000</color>
+    <color name="colorSingleSelectDialogCheckBoxUnselected">#000000</color>
+
+    <color name="colorSingleSelectDialogDoneButton">#000000</color>
+
+    <color name="colorSingleSelectDialogStatusBar">#000000</color>
+    <!-- =============================Multi Select Dialog colors================================ -->
+    <color name="colorMultiSelectDialogToolbarBackground">#000000</color>
+    <color name="colorMultiSelectDialogToolbarTitle">#FFFFFF</color>
+
+    <color name="colorMultiSelectDialogCheckBoxDefault">#000000</color>
+    <color name="colorMultiSelectDialogCheckBoxSelect">#000000</color>
+    <color name="colorMultiSelectDialogCheckBoxUnselected">#000000</color>
+
+    <color name="colorMultiSelectDialogDoneButton">#000000</color>
+
+    <color name="colorMultiSelectDialogStatusBar">#000000</color>
+    <!-- ===========================AutoCompletePlacePickerDialog colors======================== -->
+    <color name="colorAutoCompletePlacePickerDialogToolbarBackground">#000000</color>
+    <color name="colorAutoCompletePlacePickerDialogToolbarTitle">#FFFFFF</color>
+
+    <color name="colorAutoCompletePlacePickerDialogCheckBoxDefault">#000000</color>
+    <color name="colorAutoCompletePlacePickerDialogCheckBoxSelect">#000000</color>
+    <color name="colorAutoCompletePlacePickerDialogCheckBoxUnselected">#000000</color>
+
+    <color name="colorAutoCompletePlacePickerDialogDoneButton">#000000</color>
+
+    <color name="colorAutoCompletePlacePickerDialogStatusBar">#000000</color>
+
+    <!-- ===========================ChatActivity colors======================== -->
+    <!-- Mic or Send Button colors -->
+    <color name="colorChatMicOrSendButtonUnPressed">#000000</color>
+    <color name="colorChatMicOrSendButtonPressed">#46111217</color>
+
+    <!-- Emoji Button colors -->
+    <color name="colorChatEmojiButtonUnPressed">@android:color/transparent</color>
+    <color name="colorChatEmojiButtonPressed">#46111217</color>
+
+    <!-- Attach File Button colors -->
+    <color name="colorChatAttachFileButtonUnPressed">@android:color/transparent</color>
+    <color name="colorChatAttachFileButtonPressed">#46111217</color>
+
+    <!-- Camera Button colors -->
+    <color name="colorChatCameraButtonUnPressed">@android:color/transparent</color>
+    <color name="colorChatCameraButtonPressed">#46111217</color>
+
+    <!-- Incoming & Outgoing text colors -->
+    <color name="colorIncoming">#FFFFFF</color>
+    <color name="colorOutgoing">#CCCBCB</color>
+</resources>

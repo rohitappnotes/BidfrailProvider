@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityRegisterStepOne"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.stepone.view.RegisterStepOneActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/register_step_one_toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/bodyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bodyContentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/bodyLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop">
+
+                <RelativeLayout
+                    android:id="@+id/pictureRelativeLayout"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.library.utilities.customview.CircleImageView
+                        android:id="@+id/profilePictureCircleImageView"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:src="@drawable/user_placeholder"
+                        app:civ_border_color="#D0CECE"
+                        app:civ_border_overlay="false"
+                        app:civ_border_width="@dimen/_1sdp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/imageFromFloatingActionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/profilePictureCircleImageView"
+                        android:layout_alignParentEnd="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:backgroundTint="#C20114"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="true"
+                        app:borderWidth="0dp"
+                        app:fabCustomSize="@dimen/_30sdp"
+                        app:srcCompat="@drawable/ic_add"
+                        app:tint="#FFFFFF"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:hint="@string/register_step_one_hint_name"
+                        android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneNumberTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneNumberTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:hint="@string/register_step_one_hint_phone_number"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:hint="@string/register_step_one_hint_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="#A5A5A5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passwordTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/register_step_one_hint_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/confirmPasswordTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="#A5A5A5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirmPasswordTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/register_step_one_hint_confirm_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/registerMaterialButton"
+                    style="@style/RoundedButton_Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/register_step_one_button_register"/>
+
+                <LinearLayout
+                    android:id="@+id/alreadyHaveAccountLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginMaterialButton">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/register_step_one_label_already_have_an_account"
+                        android:textAppearance="@style/RegularFont12"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/loginLinkTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/link_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/login_register_link_login_now"
+                        android:textAppearance="@style/BoldFont12"
+                        android:textColor="@color/colorLink" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

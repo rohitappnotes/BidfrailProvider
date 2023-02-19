@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_20sdp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalTop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/mic" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textAppearance="@style/RegularFont16"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+    <ImageButton
+        android:id="@+id/cancelImageButton"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/chat_cancel_recording_button_background"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chat_ic_cancel_recording"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintLeft_toLeftOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/timerTextView"
+        app:layout_constraintRight_toLeftOf="@+id/pausePlayImageButton"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/pausePlayImageButton"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/chat_pause_play_recording_button_background"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chat_ic_play_recording"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintLeft_toRightOf="@+id/cancelImageButton"
+        app:layout_constraintRight_toLeftOf="@+id/doneImageButton"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:id="@+id/doneImageButton"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/chat_done_recording_button_background"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="invisible"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chat_ic_done_recording"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintLeft_toRightOf="@+id/pausePlayImageButton"
+        app:layout_constraintRight_toRightOf="@id/guidelineVerticalEnd"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:tint="@color/white" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

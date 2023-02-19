@@ -1,0 +1,180 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+}
+
+def propertiesFile = rootProject.file('local.properties')
+def properties = new Properties()
+properties.load(new FileInputStream(propertiesFile))
+
+def androidVersions = rootProject.ext.projectConfiguration
+
+android {
+    compileSdk androidVersions.compileSdk
+
+    defaultConfig {
+        applicationId androidVersions.applicationId
+        minSdk androidVersions.minSdk
+        targetSdk androidVersions.targetSdk
+        versionCode androidVersions.versionCode
+        versionName androidVersions.versionName
+
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [GOOGLE_MAPS_API_KEY: "${properties.getProperty('GOOGLE_MAPS_API_KEY')}"]
+        resValue "string", "google_maps_api_key", "${properties.getProperty('GOOGLE_MAPS_API_KEY')}"
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", "\"${properties.getProperty('GOOGLE_MAPS_API_KEY')}\""
+
+        manifestPlaceholders = [FIREBASE_SERVER_KEY: "${properties.getProperty('FIREBASE_SERVER_KEY')}"]
+        resValue "string", "firebase_server_key", "${properties.getProperty('FIREBASE_SERVER_KEY')}"
+        buildConfigField "String", "FIREBASE_SERVER_KEY", "\"${properties.getProperty('FIREBASE_SERVER_KEY')}\""
+    }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+        dataBinding = false
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    ndkVersion '23.1.7779620'
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk' //path of Android.mk file
+        }
+    }
+}
+
+dependencies {
+    implementation files('libs/joda-time-2.9.7.jar')
+
+    implementation project(':library-shadowcardview')
+    implementation project(':library-roundedhorizontalprogress')
+    implementation project(':library-numberprogressbar')
+    implementation project(':library-webview')
+    implementation project(':library-pinview')
+    implementation project(':library-shimmer')
+    implementation project(':library-roundedimageview')
+    implementation project(':library-labelview')
+    implementation project(':library-multipurpose-dialog')
+
+    implementation project(':library-networkconnectivity')
+    implementation project(':library-navigator')
+    implementation project(':library-sharedpreferences')
+    implementation project(':library-adapter')
+    implementation project(':library-utilities')
+    implementation project(':library-imagecompressor')
+    implementation project(':library-asynctask-alternative')
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    /* Google Material Design Libraries */
+    implementation "com.google.android.material:material:1.7.0"
+
+    /* use this two library, ssp is for text size, and sdp is for margin, padding and layout size */
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    /********************************** JetPack Libraries Start ***********************************/
+    // Dagger Hilt
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    annotationProcessor "com.google.dagger:hilt-compiler:2.38.1"
+
+    // Room Database
+    implementation "androidx.room:room-runtime:2.4.3"
+    annotationProcessor "androidx.room:room-compiler:2.4.3"
+    implementation "androidx.room:room-rxjava2:2.4.3" /* optional - RxJava support for Room */
+
+    // Lifecycle only (without ViewModel or LiveData) for Java & Kotlin
+    implementation "androidx.lifecycle:lifecycle-runtime:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+
+    // ViewModel for Java & Kotlin
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    // LiveData for Java & Kotlin
+    implementation "androidx.lifecycle:lifecycle-livedata:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    /*********************************** JetPack Libraries End ************************************/
+    /* Retrofit & OkHttp Libraries */
+    implementation "com.squareup.okhttp3:okhttp:4.9.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    /* Glide Libraries */
+    implementation "com.github.bumptech.glide:glide:4.13.2"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.13.2"
+
+    /* Google Libraries */
+    implementation "com.google.code.gson:gson:2.9.1"
+
+    /* Firebase Libraries */
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-core'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+
+    /* Map and Location Libraries */
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.android.libraries.places:places:2.7.0'
+
+    /**
+     * Logging Interceptor
+     * link : https://github.com/ihsanbal/LoggingInterceptor
+     */
+    implementation('com.github.ihsanbal:LoggingInterceptor:3.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    /**
+     * Circle Indicator
+     * link : https://github.com/ongakuer/CircleIndicator
+     */
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    /**
+     * Lottie
+     * link :  https://github.com/airbnb/lottie-android
+     */
+    implementation 'com.airbnb.android:lottie:4.1.0'
+}

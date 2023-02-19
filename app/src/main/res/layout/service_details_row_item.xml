@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.library.shadowcardview.ShadowCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subServiceAddedRowItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cornersRadius="8dp"
+    app:shadowBottomHeight="8dp"
+    app:shadowColor="#D0CECE"
+    app:shadowLeftHeight="8dp"
+    app:shadowRightHeight="8dp"
+    app:shadowTopHeight="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp">
+
+        <FrameLayout
+            android:id="@+id/subServiceFrameLayout"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp">
+
+            <com.library.roundedimageview.RoundedImageView
+                android:id="@+id/subServiceImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_sub_service"
+                app:riv_border_color="#000000"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="10dip"
+                app:riv_mutate_background="true"
+                app:riv_oval="false" />
+
+            <ProgressBar
+                android:id="@+id/imageLoadingProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/subServiceNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toStartOf="@id/amountTextView"
+            android:layout_toEndOf="@id/subServiceFrameLayout"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:maxLines="2"
+            android:textAppearance="@style/BoldFont10"
+            android:textColor="@color/black"
+            tools:text="Fan Installation" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/service_details_amount_background"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/BoldFont12"
+            android:textColor="@color/black"
+            tools:text="\u20B9 500" />
+    </RelativeLayout>
+</com.library.shadowcardview.ShadowCardView>
+

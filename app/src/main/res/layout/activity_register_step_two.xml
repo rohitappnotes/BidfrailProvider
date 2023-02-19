@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityRegisterStepTwo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.steptwo.view.RegisterStepTwoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/register_step_two_toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/bodyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bodyContentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/bodyLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop">
+
+                <TextView
+                    android:id="@+id/headingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/register_step_two_label_verification_code"
+                    android:textAppearance="@style/BoldFont18"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/labelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/register_step_two_label_enter_6_digit_code_sent_to_your_phone"
+                    android:textAppearance="@style/MediumFont10"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/sentToTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="@string/register_step_two_label_sent_to"
+                        android:textAppearance="@style/BoldFont10"
+                        android:textColor="#C20114" />
+
+                    <TextView
+                        android:id="@+id/sentToPhoneNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/sentToTextView"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="@string/register_step_two_label_default_phone_number_sent_to"
+                        android:textAppearance="@style/MediumFont10" />
+                </RelativeLayout>
+
+                <com.library.pinview.PinView
+                    android:id="@+id/pinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:cursorVisible="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:lineSpacingExtra="0dp"
+                    android:textAppearance="@style/MediumFont12"
+                    android:textColor="@color/pin_view_text_colors"
+                    app:cursorColor="@color/pin_view_line_selected"
+                    app:cursorWidth="@dimen/_1sdp"
+                    app:itemCount="6"
+                    app:itemHeight="@dimen/_40sdp"
+                    app:itemRadius="@dimen/_2sdp"
+                    app:itemSpacing="@dimen/_2sdp"
+                    app:itemWidth="@dimen/_40sdp"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                    app:layout_constraintTop_toBottomOf="@+id/sentToHeadingTextView"
+                    app:lineColor="@color/pin_view_line_colors"
+                    app:lineWidth="@dimen/_1sdp"
+                    app:viewType="rectangle" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/verifyMaterialButton"
+                    style="@style/RoundedButton_Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/register_step_two_button_verify" />
+
+                <LinearLayout
+                    android:id="@+id/reSendCodeLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                    app:layout_constraintTop_toBottomOf="@+id/verifyButton">
+
+                    <TextView
+                        android:id="@+id/reSendCodeMessageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/register_step_two_link_resend_code"
+                        android:textAppearance="@style/RegularFont10"
+                        android:textColor="@color/colorLabel" />
+
+                    <TextView
+                        android:id="@+id/reSendCodeLinkOrTimerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/link_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/register_step_two_label_resend_timer"
+                        android:textAppearance="@style/BoldFont10"
+                        android:textColor="@color/colorLink"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

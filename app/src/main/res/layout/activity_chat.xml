@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityChatActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.chat.view.ChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/chat_toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputRelativeLayout"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:itemCount="10" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputRelativeLayout"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/errorImageView"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputRelativeLayout"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="Don't have message yet"
+        android:textAppearance="@style/BoldFont10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        app:layout_constraintTop_toBottomOf="@id/errorImageView" />
+
+    <RelativeLayout
+        android:id="@+id/messageInputRelativeLayout"
+        android:background="@drawable/chat_message_input_rectangle_background"
+        android:minHeight="@dimen/_45sdp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintEnd_toStartOf="@+id/micOrSendImageButton"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart">
+
+        <ImageButton
+            android:id="@+id/emojiImageButton"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/chat_emoji_button_background"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:visibility="gone"
+            android:padding="@dimen/_4sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/chat_ic_emoji"
+            app:tint="@color/black" />
+
+        <EditText
+            android:id="@+id/saySomethingEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/attachFileImageButton"
+            android:layout_toEndOf="@+id/emojiImageButton"
+            android:autofillHints=""
+            android:background="@null"
+            android:hint="@string/chat_label_write_a_message"
+            android:inputType="textMultiLine"
+            android:maxHeight="@dimen/_120sdp"
+            android:minHeight="@dimen/_45sdp"
+            android:scrollbars="vertical"
+            tools:hint="Say something..." />
+
+        <ImageButton
+            android:id="@+id/attachFileImageButton"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imageFromImageButton"
+            android:background="@drawable/chat_attach_file_button_background"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:padding="@dimen/_4sdp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@drawable/chat_ic_attach_file"
+            app:tint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/imageFromImageButton"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/chat_camera_button_background"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:padding="@dimen/_4sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/chat_ic_image_from"
+            app:tint="@color/black" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/micOrSendImageButton"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/chat_mic_or_send_button_background"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chat_ic_mic"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

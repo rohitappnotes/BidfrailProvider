@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentContactUs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.afterloginregister.fragment.contactus.view.ContactUsFragment">
+
+    <LinearLayout
+        android:id="@+id/contentLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottomRoot"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalTopRoot">
+
+        <ImageView
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/contact_us" />
+
+        <RelativeLayout
+            android:id="@+id/callRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dash_green_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/callImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_call_to"
+                app:tint="#88BF48" />
+
+            <LinearLayout
+                android:id="@+id/callLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/callImageView"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contactUsHeadingTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_us_toolbar_title"
+                    android:textAppearance="@style/BoldFont12"
+                    android:textColor="#88BF48" />
+
+                <TextView
+                    android:id="@+id/contactNumberTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/BoldFont8"
+                    android:textColor="@color/black"
+                    tools:text="918588832388" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chatRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dash_skyblue_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/chatImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_message_to"
+                app:tint="#2196F3" />
+
+            <LinearLayout
+                android:id="@+id/chatLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/chatImageView"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/chatWithUsHeadingTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_us_label_chat_with_us"
+                    android:textAppearance="@style/BoldFont12"
+                    android:textColor="#2196F3" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTopRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStartRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEndRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

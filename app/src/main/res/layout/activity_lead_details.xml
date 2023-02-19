@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityLeadDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.afterloginregister.fragment.leaddetails.view.LeadDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/lead_details_toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.library.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalBottomRoot"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <!--add  several shimmer placeholder layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@color/shimmer_placeholder"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/view5"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/view1"
+                app:layout_constraintTop_toTopOf="@id/view1"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="6dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toStartOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintBottom_toBottomOf="@+id/view1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2"/>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="170dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/view1"
+                app:layout_constraintEnd_toStartOf="@+id/view4"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view6" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view7" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view9" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view10" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view11" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view12" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.library.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalBottomRoot"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/subCategoryImageViewFrameLayout"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/subCategoryImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/order_image_background"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp" />
+
+                <ProgressBar
+                    android:id="@+id/imageLoadingProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/orderNumberHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_order_id"
+                android:textAppearance="@style/RegularFont10"
+                android:textColor="#605D66"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/orderSubCategoryTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintTop_toTopOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/orderNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/BoldFont10"
+                android:textColor="#605D66"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/statusTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintTop_toTopOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="1234567890" />
+
+            <TextView
+                android:id="@+id/orderSubCategoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/BoldFont10"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintEnd_toStartOf="@+id/statusTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintTop_toBottomOf="@id/orderNumberHeadingTextView"
+                tools:text="Electrician" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/tag_green"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/tag_green"
+                app:layout_constraintBottom_toBottomOf="@+id/subCategoryImageViewFrameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/subCategoryImageViewFrameLayout"
+                tools:text="Accepted" />
+
+            <TextView
+                android:id="@+id/serviceAddedHeadingTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Service Added"
+                android:textAppearance="@style/BoldFont14"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subCategoryImageViewFrameLayout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/serviceAddedRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-6dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="-6dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceAddedHeadingTextView"
+                tools:itemCount="2"
+                tools:listitem="@layout/sub_service_added_row_item" />
+
+            <ImageView
+                android:id="@+id/scheduleImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceAddedRecyclerView" />
+
+            <TextView
+                android:id="@+id/dateTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/scheduleHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/scheduleImageView"
+                app:layout_constraintTop_toTopOf="@id/scheduleImageView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="10 Dec, 07:30 PM" />
+
+            <TextView
+                android:id="@+id/scheduleHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_schedule"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/scheduleImageView"
+                app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/scheduleImageView"
+                app:layout_constraintTop_toBottomOf="@id/dateTimeTextView" />
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:padding="@dimen/_2sdp"
+                android:textAppearance="@style/BoldFont10"
+                android:textColor="#C20114"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/scheduleImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scheduleImageView"
+                tools:text="15:30"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/messageMaterialButton"
+                style="@style/Message_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/leads_button_message"
+                app:layout_constraintEnd_toStartOf="@+id/callMaterialButton"
+                app:layout_constraintTop_toBottomOf="@id/scheduleImageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/callMaterialButton"
+                style="@style/Call_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="@string/leads_button_call"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scheduleImageView" />
+
+            <ImageView
+                android:id="@+id/locationImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/messageMaterialButton" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="2"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+                app:layout_constraintEnd_toStartOf="@+id/getDirectionMaterialButton"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/locationImageView"
+                app:layout_constraintTop_toTopOf="@id/locationImageView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Site no. 39, 1st Main, 1st cross, Manjunatha" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/getDirectionMaterialButton"
+                style="@style/SmallRoundedButton_Green"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="@string/leads_button_get_direction"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/locationImageView" />
+
+            <ImageView
+                android:id="@+id/creditsSpendImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_credits_spend"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationImageView" />
+
+            <TextView
+                android:id="@+id/creditsSpendHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_credits_spend"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/creditsSpendTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/creditsSpendImageView"
+                app:layout_constraintTop_toTopOf="@id/creditsSpendImageView"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/creditsSpendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/creditsSpendImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/creditsSpendImageView"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendHeadingTextView"
+                tools:text="20" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bidFroThisJobOrAcceptMaterialButton"
+                style="@style/SmallRoundedButton_Green"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/leads_button_bid_for_this_job"
+                app:layout_constraintEnd_toStartOf="@+id/rejectMaterialButton"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendImageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rejectMaterialButton"
+                style="@style/SmallRoundedButton_Red"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="@string/leads_button_reject"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendImageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startAndRaiseBillMaterialButton"
+                style="@style/SmallRoundedButton_Red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/leads_button_start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bidFroThisJobOrAcceptMaterialButton" />
+
+            <LinearLayout
+                android:id="@+id/waitingForResponseOrYouHaveGotFinalOfferForResponseLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:background="@drawable/waiting_for_response_or_final_offer_background"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4"
+                app:layout_constraintTop_toBottomOf="@id/startAndRaiseBillMaterialButton">
+
+                <TextView
+                    android:id="@+id/waitingForResponseOrYouHaveGotFinalOfferForResponseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/leads_toolbar_label_waiting_for_response"
+                    android:textAppearance="@style/MediumFont14"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/finalAmountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:textAppearance="@style/RegularFont10"
+                    android:textColor="@color/white"
+                    tools:text="Final Amount : \u20B9 500" />
+
+                <TextView
+                    android:id="@+id/messageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:textAppearance="@style/RegularFont10"
+                    android:textColor="@color/white"
+                    tools:text="Message : I need to work on this amount" />
+
+                <LinearLayout
+                    android:id="@+id/finalOfferLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/acceptFinalOfferMaterialButton"
+                        style="@style/SmallRoundedButton_Green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="@string/leads_button_accept" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rejectFinalOfferMaterialButton"
+                        style="@style/SmallRoundedButton_Red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/leads_button_reject" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/supportMapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/waitingForResponseOrYouHaveGotFinalOfferForResponseLinearLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTopRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStartRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEndRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

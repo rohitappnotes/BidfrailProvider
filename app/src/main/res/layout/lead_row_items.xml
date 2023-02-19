@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/leadRowItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <com.library.shadowcardview.ShadowCardView
+        android:id="@+id/shadowCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornersRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowBottomHeight="8dp"
+        app:shadowColor="#D0CECE"
+        app:shadowLeftHeight="8dp"
+        app:shadowRightHeight="8dp"
+        app:shadowTopHeight="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <FrameLayout
+                android:id="@+id/subCategoryImageViewFrameLayout"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/subCategoryImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/order_image_background"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp" />
+
+                <ProgressBar
+                    android:id="@+id/imageLoadingProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/orderNumberHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_order_id"
+                android:textAppearance="@style/RegularFont8"
+                android:textColor="#605D66"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/orderSubCategoryTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintTop_toTopOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/orderNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/BoldFont8"
+                android:textColor="#605D66"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/statusTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintTop_toTopOf="@+id/orderNumberHeadingTextView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="1234567890" />
+
+            <TextView
+                android:id="@+id/orderSubCategoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/BoldFont8"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintEnd_toStartOf="@+id/statusTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/subCategoryImageViewFrameLayout"
+                app:layout_constraintTop_toBottomOf="@id/orderNumberHeadingTextView"
+                tools:text="Electrician" />
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/tag_green"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont8"
+                android:textColor="@color/tag_green"
+                app:layout_constraintBottom_toBottomOf="@+id/subCategoryImageViewFrameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/subCategoryImageViewFrameLayout"
+                tools:text="Accepted" />
+
+            <ImageView
+                android:id="@+id/scheduleImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_75sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dateTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/scheduleHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/scheduleImageView"
+                app:layout_constraintTop_toTopOf="@id/scheduleImageView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="10 Dec, 07:30 PM" />
+
+            <TextView
+                android:id="@+id/scheduleHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_schedule"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/scheduleImageView"
+                app:layout_constraintEnd_toStartOf="@+id/timerTextView"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/scheduleImageView"
+                app:layout_constraintTop_toBottomOf="@id/dateTimeTextView" />
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:padding="@dimen/_2sdp"
+                android:textAppearance="@style/BoldFont10"
+                android:textColor="#C20114"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/scheduleImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scheduleImageView"
+                tools:text="15:30"
+                tools:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/messageFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintEnd_toStartOf="@+id/callMaterialButton"
+                app:layout_constraintTop_toBottomOf="@id/scheduleImageView">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/messageMaterialButton"
+                    style="@style/Message_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text="@string/leads_button_message"
+                    app:layout_constraintEnd_toStartOf="@+id/callMaterialButton"
+                    app:layout_constraintTop_toBottomOf="@id/scheduleImageView" />
+
+                <com.bidfrail.provider.CircularTextView
+                    android:id="@+id/chatCountCircularTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="20"
+                    android:textAppearance="@style/MediumFont8"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/callMaterialButton"
+                style="@style/Call_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="@string/leads_button_call"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scheduleImageView" />
+
+            <ImageView
+                android:id="@+id/locationImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/messageFrameLayout" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="2"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+                app:layout_constraintEnd_toStartOf="@+id/getDirectionMaterialButton"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/locationImageView"
+                app:layout_constraintTop_toTopOf="@id/locationImageView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Site no. 39, 1st Main, 1st cross, Manjunatha" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/getDirectionMaterialButton"
+                style="@style/SmallRoundedButton_Green"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:text="@string/leads_button_get_direction"
+                app:layout_constraintBottom_toBottomOf="@+id/locationImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/locationImageView" />
+
+            <ImageView
+                android:id="@+id/creditsSpendImageView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/order_schedule_image_background"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_credits_spend"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/locationImageView" />
+
+            <TextView
+                android:id="@+id/creditsSpendHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/leads_toolbar_label_credits_spend"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/black"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/creditsSpendTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/creditsSpendImageView"
+                app:layout_constraintTop_toTopOf="@id/creditsSpendImageView"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/creditsSpendTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="#A5A4A5"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/creditsSpendImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/creditsSpendImageView"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendHeadingTextView"
+                tools:text="20" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bidFroThisJobOrAcceptMaterialButton"
+                style="@style/SmallRoundedButton_Green"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/leads_button_bid_for_this_job"
+                app:layout_constraintEnd_toStartOf="@+id/rejectMaterialButton"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendImageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rejectMaterialButton"
+                style="@style/SmallRoundedButton_Red"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="@string/leads_button_reject"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/creditsSpendImageView" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startAndRaiseBillMaterialButton"
+                style="@style/SmallRoundedButton_Red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/leads_button_start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bidFroThisJobOrAcceptMaterialButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.library.labelview.LabelView
+            android:id="@+id/labelView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:lv_background_color="@color/tag_red"
+            app:lv_fill_triangle="false"
+            app:lv_gravity="TOP_LEFT"
+            app:lv_text="Book Now"
+            app:lv_text_all_caps="false"
+            app:lv_text_size="12sp" />
+    </com.library.shadowcardview.ShadowCardView>
+
+    <LinearLayout
+        android:id="@+id/waitingForResponseOrYouHaveGotFinalOfferForResponseLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/lead_item_footer_background"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintTop_toBottomOf="@id/shadowCardView">
+
+        <TextView
+            android:id="@+id/waitingForResponseOrYouHaveGotFinalOfferForResponseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:text="@string/leads_toolbar_label_waiting_for_response"
+            android:textAppearance="@style/MediumFont14"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

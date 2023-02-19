@@ -1,0 +1,38 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+rootProject.name = "Bidfrail Provider"
+include ':app'
+
+include ':library-shadowcardview'
+include ':library-roundedhorizontalprogress'
+include ':library-numberprogressbar'
+include ':library-webview'
+include ':library-pinview'
+include ':library-shimmer'
+include ':library-roundedimageview'
+include ':library-labelview'
+include ':library-multipurpose-dialog'
+
+include ':library-utilities'
+include ':library-navigator'
+include ':library-networkconnectivity'
+include ':library-sharedpreferences'
+include ':library-adapter'
+include ':library-asynctask-alternative'
+include ':library-imagecompressor'
+
+
+

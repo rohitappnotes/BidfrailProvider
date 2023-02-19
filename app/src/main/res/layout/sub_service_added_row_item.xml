@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.library.shadowcardview.ShadowCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subServiceAddedRowItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cornersRadius="8dp"
+    app:shadowBottomHeight="8dp"
+    app:shadowColor="#D0CECE"
+    app:shadowLeftHeight="8dp"
+    app:shadowRightHeight="8dp"
+    app:shadowTopHeight="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp">
+
+        <FrameLayout
+            android:id="@+id/subServiceImageFrameLayout"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.library.roundedimageview.RoundedImageView
+                android:id="@+id/subServiceImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_sub_service"
+                app:riv_border_color="#000000"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="10dip"
+                app:riv_mutate_background="true"
+                app:riv_oval="false" />
+
+            <ProgressBar
+                android:id="@+id/imageLoadingProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/subServiceNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textAppearance="@style/BoldFont12"
+            android:textColor="@color/black"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/quantityTextView"
+            app:layout_constraintEnd_toStartOf="@+id/totalAmountTextView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/subServiceImageFrameLayout"
+            app:layout_constraintTop_toTopOf="@id/subServiceImageFrameLayout"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Fan Installation" />
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textAppearance="@style/RegularFont10"
+            android:textColor="#605D66"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/subServiceImageFrameLayout"
+            app:layout_constraintEnd_toStartOf="@+id/totalAmountTextView"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/subServiceImageFrameLayout"
+            app:layout_constraintTop_toBottomOf="@id/subServiceNameTextView"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Quantity : 6" />
+
+        <TextView
+            android:id="@+id/totalAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/sub_service_total_amount_background"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="@style/BoldFont14"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/subServiceImageFrameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/subServiceImageFrameLayout"
+            tools:text="\u20B9 500" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.library.shadowcardview.ShadowCardView>
+
+
+

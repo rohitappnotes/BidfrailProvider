@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialogSingleSelectItemRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_select_item_background"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_3sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/singleSelectItemImageView"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:src="#dddddd" />
+
+    <TextView
+        android:id="@+id/singleSelectItemNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/singleSelectItemRadioButton"
+        android:layout_toEndOf="@+id/singleSelectItemImageView"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="#000000"
+        tools:text="Item Name" />
+
+    <CheckBox
+        android:id="@+id/singleSelectItemRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/single_select_radio_button_item_icon_selector"
+        android:buttonTint="@drawable/single_select_radio_button_item_text_selector"
+        android:checked="true"
+        android:fontFamily="@font/bold"
+        android:minWidth="0dp"
+        android:minHeight="0dp" />
+</RelativeLayout>

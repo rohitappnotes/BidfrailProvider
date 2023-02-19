@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityRegisterStepThree"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.stepthree.view.RegisterStepThreeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/register_step_three_toolbar_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/bodyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bodyContentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/bodyLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/areaRegionTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/register_step_three_hint_area_region"
+                    app:endIconCheckable="true"
+                    app:endIconDrawable="@drawable/ic_arrow_drop_down"
+                    app:endIconMode="custom"
+                    app:endIconTint="#A5A5A5"
+                    app:errorIconDrawable="@null"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/areaRegionTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/register_step_three_hint_select"
+                        android:cursorVisible="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/categoryTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/register_step_three_hint_category"
+                    app:endIconCheckable="true"
+                    app:endIconDrawable="@drawable/ic_arrow_drop_down"
+                    app:endIconMode="custom"
+                    app:endIconTint="#A5A5A5"
+                    app:errorIconDrawable="@null"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/categoryTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/register_step_three_hint_select"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/subCategoryTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/register_step_three_hint_sub_category"
+                    app:endIconCheckable="true"
+                    app:endIconDrawable="@drawable/ic_arrow_drop_down"
+                    app:endIconMode="custom"
+                    app:endIconTint="#A5A5A5"
+                    app:errorIconDrawable="@null"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/subCategoryTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/register_step_three_hint_select"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aboutYouTextInputLayout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:endIconMode="clear_text"
+                    app:errorIconDrawable="@null">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/aboutYouTextInputEditText"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|start"
+                        android:hint="@string/register_step_three_hint_about_you"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLines="6"
+                        android:minLines="4"
+                        android:scrollHorizontally="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/aadhaarCardFrontHintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/register_step_three_hint_upload_aadhaar_card_front"
+                    android:textAppearance="@style/RegularFont12"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/aadhaarCardFrontImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@color/placeholder" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aadhaarCardFrontMaterialButton"
+                    style="@style/RoundedButton_Icon_Red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/register_step_three_button_upload"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="start"
+                    app:iconPadding="@dimen/_5sdp"
+                    app:iconSize="@dimen/_25sdp"
+                    app:iconTint="@null" />
+
+                <TextView
+                    android:id="@+id/aadhaarCardBackHintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/register_step_three_hint_upload_aadhaar_card_back"
+                    android:textAppearance="@style/RegularFont12"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/aadhaarCardBackImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@color/placeholder" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/aadhaarCardBackMaterialButton"
+                    style="@style/RoundedButton_Icon_Red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/register_step_three_button_upload"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="start"
+                    app:iconPadding="@dimen/_5sdp"
+                    app:iconSize="@dimen/_25sdp"
+                    app:iconTint="@null" />
+
+                <TextView
+                    android:id="@+id/panCardHintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/register_step_three_hint_upload_pan_card"
+                    android:textAppearance="@style/RegularFont12"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/panCardImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@color/placeholder" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/panCardMaterialButton"
+                    style="@style/RoundedButton_Icon_Red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/register_step_three_button_upload"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="start"
+                    app:iconPadding="@dimen/_5sdp"
+                    app:iconSize="@dimen/_25sdp"
+                    app:iconTint="@null" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submitMaterialButton"
+                    style="@style/RoundedButton_Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/register_step_three_button_submit"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

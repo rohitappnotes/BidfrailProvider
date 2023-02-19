@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="11" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/library-adapter" />
+            <option value="$PROJECT_DIR$/library-asynctask-alternative" />
+            <option value="$PROJECT_DIR$/library-imagecompressor" />
+            <option value="$PROJECT_DIR$/library-labelview" />
+            <option value="$PROJECT_DIR$/library-multipurpose-dialog" />
+            <option value="$PROJECT_DIR$/library-navigator" />
+            <option value="$PROJECT_DIR$/library-networkconnectivity" />
+            <option value="$PROJECT_DIR$/library-numberprogressbar" />
+            <option value="$PROJECT_DIR$/library-pinview" />
+            <option value="$PROJECT_DIR$/library-roundedhorizontalprogress" />
+            <option value="$PROJECT_DIR$/library-roundedimageview" />
+            <option value="$PROJECT_DIR$/library-shadowcardview" />
+            <option value="$PROJECT_DIR$/library-sharedpreferences" />
+            <option value="$PROJECT_DIR$/library-shimmer" />
+            <option value="$PROJECT_DIR$/library-utilities" />
+            <option value="$PROJECT_DIR$/library-webview" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

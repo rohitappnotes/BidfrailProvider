@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/billDetailsHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_bill_details"
+        android:textAppearance="@style/BoldFont16"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalTopRoot" />
+
+    <View
+        android:id="@+id/startHorizontalView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="#7C9279"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/billDetailsHeadingTextView" />
+
+    <TextView
+        android:id="@+id/totalMRPHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_total_mrp"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/startHorizontalView" />
+
+    <TextView
+        android:id="@+id/totalMRPValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="#31302C"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintTop_toBottomOf="@id/startHorizontalView"
+        tools:text="\u20B9 2537.32" />
+
+    <TextView
+        android:id="@+id/couponDiscountHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_coupon_discount"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/totalMRPHeadingTextView" />
+
+    <TextView
+        android:id="@+id/couponDiscountValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="#52B46B"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintTop_toBottomOf="@id/totalMRPValueTextView"
+        tools:text="- \u20B9 36" />
+
+    <TextView
+        android:id="@+id/convenienceFeeHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_convenience_fee"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountHeadingTextView" />
+
+    <TextView
+        android:id="@+id/convenienceFeeValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_free"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="#52B46B"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintTop_toBottomOf="@id/couponDiscountValueTextView" />
+
+    <TextView
+        android:id="@+id/taxChargesHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_tax_charges"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/convenienceFeeHeadingTextView" />
+
+    <TextView
+        android:id="@+id/taxChargesValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textAppearance="@style/RegularFont12"
+        android:textColor="#31302C"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintTop_toBottomOf="@id/convenienceFeeValueTextView"
+        tools:text="\u20B9 36" />
+
+    <View
+        android:id="@+id/endHorizontalView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="#7C9279"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/taxChargesHeadingTextView" />
+
+    <TextView
+        android:id="@+id/billTotalHeadingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/send_bill_label_bill_total"
+        android:textAppearance="@style/BoldFont16"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@id/endHorizontalView" />
+
+    <TextView
+        android:id="@+id/billTotalValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:textAppearance="@style/BoldFont16"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintTop_toBottomOf="@id/endHorizontalView"
+        tools:text="\u20B9 2537.32" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/giveFinalRateTextInputLayout"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@+id/billTotalHeadingTextView"
+        app:startIconCheckable="true"
+        app:startIconDrawable="@drawable/ic_rupee_symbol"
+        app:startIconTint="#605D66">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/giveFinalRateTextInputEditText"
+            style="@style/TextInputEditText"
+            android:hint="@string/send_bill_hint_give_final_rate"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTextInputLayout"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:endIconMode="clear_text"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@+id/giveFinalRateTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionTextInputEditText"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="@string/send_bill_hint_description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="6"
+            android:minLines="3"
+            android:scrollHorizontally="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendRatesMaterialButton"
+        style="@style/SmallRoundedButton_Red"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/send_bill_button_send_rates"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalBottomRoot"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextInputLayout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTopRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStartRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEndRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

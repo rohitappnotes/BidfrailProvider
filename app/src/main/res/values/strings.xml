@@ -1,0 +1,280 @@
+<resources>
+    <string name="app_name">BidFrail Provider</string>
+
+    <string name="default_notification_channel_id">1</string>
+    <string name="default_notification_channel_name">bidfrail provider job notifications</string>
+    <string name="default_notification_channel_description">bidfrail provider job notification to notify about jobs</string>
+
+    <string name="siren_notification_channel_id">2</string>
+    <string name="siren_notification_channel_name">bidfrail provider new job notifications</string>
+    <string name="siren_notification_channel_description">bidfrail provider new job notification to notify about jobs</string>
+    <!--=====================================SplashActivity======================================-->
+    <string name="splash_toolbar_title">Splash</string>
+    <string name="splash_toolbar_sub_title">Splash Screen</string>
+    <!--=================================LoginRegisterActivity===================================-->
+    <string name="login_toolbar_title">Login</string>
+    <string name="login_toolbar_sub_title">Login Screen</string>
+
+    <string name="login_hint_email">Email</string>
+    <string name="login_hint_password">Password</string>
+
+    <string name="login_error_email_one">Please enter your email</string>
+    <string name="login_error_email_two">Please enter valid email</string>
+
+    <string name="login_error_password_message_one">Please enter password</string>
+    <string name="login_error_password_message_two">Password length should not be less than 8 characters</string>
+    <string name="login_error_password_message_three">Password length should not be greater than 20 characters</string>
+    <string name="login_error_password_message_four">Password must contain 1 or more Capital letter</string>
+    <string name="login_error_password_message_five">Password must contain 1 or more Small letter</string>
+    <string name="login_error_password_message_six">Password must contain 1 or more digit characters</string>
+    <string name="login_error_password_message_seven">Password must contain 1 or more special characters</string>
+    <string name="login_error_password_message_eight">white spaces don’t allowed</string>
+
+    <string name="login_label_forgot_your_password">Forgot your password?</string>
+
+    <string name="login_label_don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login_link_register_now">Register Now</string>
+
+    <string name="login_button_login">Login</string>
+
+    <string name="login_response_invalid_credentials_login_failed">Invalid credentials. Login failed</string>
+    <!--================================RegisterStepOneActivity==================================-->
+    <string name="register_step_one_toolbar_title">Register</string>
+    <string name="register_step_one_toolbar_sub_title">Register Screen</string>
+
+    <string name="register_step_one_hint_name">Name</string>
+    <string name="register_step_one_hint_phone_number">Phone number</string>
+    <string name="register_step_one_hint_email">Email</string>
+    <string name="register_step_one_hint_password">Password</string>
+    <string name="register_step_one_hint_confirm_password">Confirm password</string>
+
+    <string name="register_step_one_error_profile_picture_one">Please select profile picture</string>
+    <string name="register_step_one_error_name_one">Please enter your name</string>
+    <string name="register_step_one_error_phone_number_one">Please enter your phone number</string>
+    <string name="register_step_one_error_phone_number_two">Please enter valid phone number</string>
+    <string name="register_step_one_error_email_one">Please enter your email</string>
+    <string name="register_step_one_error_email_two">Please enter valid email</string>
+
+    <string name="register_step_one_error_password_message_one">Please enter password</string>
+    <string name="register_step_one_error_password_message_two">Password length should not be less than 8 characters</string>
+    <string name="register_step_one_error_password_message_three">Password length should not be greater than 20 characters</string>
+    <string name="register_step_one_error_password_message_four">Password must contain 1 or more Capital letter</string>
+    <string name="register_step_one_error_password_message_five">Password must contain 1 or more Small letter</string>
+    <string name="register_step_one_error_password_message_six">Password must contain 1 or more digit characters</string>
+    <string name="register_step_one_error_password_message_seven">Password must contain 1 or more special characters</string>
+    <string name="register_step_one_error_password_message_eight">white spaces don’t allowed</string>
+
+    <string name="register_step_one_error_confirm_password_message_one">Please enter confirm password</string>
+    <string name="register_step_one_error_confirm_password_message_two">Confirm password length should not be less than 8 characters</string>
+    <string name="register_step_one_error_confirm_password_message_three">Password and Confirm password not match</string>
+
+    <string name="register_step_one_label_camera">Camera</string>
+    <string name="register_step_one_label_gallery">Gallery</string>
+
+    <string name="register_step_one_label_already_have_an_account">Already have an account?</string>
+    <string name="login_register_link_login_now">Login Now</string>
+
+    <string name="register_step_one_button_register">Register</string>
+
+    <string name="register_step_one_response_email_already_exist">Sorry, Email is already exists, use another Email</string>
+    <string name="register_step_one_response_phone_number_already_exist">Sorry, Phone number is already exists, use another Phone number</string>
+    <string name="register_step_one_response_verification_code_send_success">Verification code send successfully</string>
+    <!--================================RegisterStepTwoActivity==================================-->
+    <string name="register_step_two_toolbar_title">Verify OTP</string>
+    <string name="register_step_two_toolbar_sub_title">Verify OTP Screen</string>
+
+    <string name="register_step_two_label_verification_code">Verification Code</string>
+    <string name="register_step_two_label_enter_6_digit_code_sent_to_your_phone">Enter 6 digit code sent to your phone</string>
+    <string name="register_step_two_label_sent_to">Sent to</string>
+    <string name="register_step_two_label_default_phone_number_sent_to">+91–XXXXXXXXXX</string>
+    <string name="register_step_two_label_resend_code_in">Resend code in</string>
+    <string name="register_step_two_label_resend_timer">60s</string>
+    <string name="register_step_two_label_did_not_get_the_code">Didn’t get the code?</string>
+
+    <string name="register_step_two_error_otp_one">Please enter the verification code</string>
+    <string name="register_step_two_error_otp_two">You have entered an incorrect verification code</string>
+
+    <string name="register_step_two_link_resend_code">Resend Code</string>
+
+    <string name="register_step_two_button_verify">Verify</string>
+
+    <string name="register_step_two_response_verification_code_send_success">Verification code send successfully</string>
+    <!--==============================RegisterStepThreeActivity==================================-->
+    <string name="register_step_three_toolbar_title">Basic details</string>
+    <string name="register_step_three_toolbar_sub_title">Basic details Screen</string>
+
+    <string name="register_step_three_hint_select">Select</string>
+    <string name="register_step_three_hint_area_region">Area Region</string>
+    <string name="register_step_three_hint_category">Category</string>
+    <string name="register_step_three_hint_sub_category">Sub Category</string>
+    <string name="register_step_three_hint_about_you">About You</string>
+    <string name="register_step_three_hint_upload_aadhaar_card_front">Upload Aadhaar Card Front</string>
+    <string name="register_step_three_hint_upload_aadhaar_card_back">Upload Aadhaar Card Back</string>
+    <string name="register_step_three_hint_upload_pan_card">Upload Pan Card</string>
+
+    <string name="register_step_three_error_select_area_one">Please select area region</string>
+    <string name="register_step_three_error_select_category_one">Please select category</string>
+    <string name="register_step_three_error_select_sub_category_one">Please select subcategory</string>
+    <string name="register_step_three_error_about_you_one">Please enter about you</string>
+    <string name="register_step_three_error_aadhaar_card_front_one">Please capture or select your aadhaar card front photo</string>
+    <string name="register_step_three_error_aadhaar_card_back_one">Please capture or select your aadhaar card back photo</string>
+    <string name="register_step_three_error_pan_card_one">Please capture or select your pan card photo</string>
+
+    <string name="register_step_three_button_upload">Upload</string>
+    <string name="register_step_three_button_submit">Submit</string>
+
+    <string name="register_step_three_response_registered_success">You have successfully registered</string>
+    <string name="register_step_three_response_account_created">Your account has been created successfully</string>
+    <!--==================================ForgotPasswordActivity=================================-->
+    <string name="forgot_password_toolbar_title">Forgot Password</string>
+    <string name="forgot_password_toolbar_sub_title">Forgot Password Screen</string>
+
+    <string name="forgot_password_response_password_change_success">Password has been change successfully</string>
+    <!--================================AfterLoginRegisterActivity===============================-->
+    <string name="after_login_toolbar_title">After Login</string>
+    <string name="after_login_toolbar_sub_title">After Login Screen</string>
+
+    <string name="after_login_left_nav_drawer_open">Open navigation drawer</string>
+    <string name="after_login_left_nav_drawer_close">Close navigation drawer</string>
+
+    <string name="after_login_left_nav_drawer_header_update_profile">Update Profile</string>
+
+    <string name="after_login_left_nav_drawer_menu_home">Home</string>
+    <string name="after_login_left_nav_drawer_menu_completed_orders">Completed orders</string>
+    <string name="after_login_left_nav_drawer_menu_learn_how_to_use">Learn How TO Use</string>
+    <string name="after_login_left_nav_drawer_menu_about_us">About Us</string>
+    <string name="after_login_left_nav_drawer_menu_contact_us">Contact Us</string>
+    <string name="after_login_left_nav_drawer_menu_terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="after_login_left_nav_drawer_menu_privacy_policy">Privacy Policy</string>
+    <string name="after_login_left_nav_drawer_menu_share">Share</string>
+
+    <string name="after_login_left_nav_drawer_logout">Logout</string>
+
+    <string name="after_login_bottom_nav_menu_home">Home</string>
+    <string name="after_login_bottom_nav_menu_leads">Leads</string>
+    <string name="after_login_bottom_nav_menu_wallet">Wallet</string>
+    <string name="after_login_bottom_nav_menu_profile">Profile</string>
+    <!--=======================================HomeFragment======================================-->
+    <string name="home_toolbar_title">Home</string>
+    <string name="home_toolbar_sub_title">Home Screen</string>
+    <!--================================CompletedOrdersFragment==================================-->
+    <string name="completed_orders_toolbar_title">Completed Orders</string>
+    <string name="completed_orders_toolbar_sub_title">Completed Orders Screen</string>
+    <!--================================LearnHowToUseFragment==================================-->
+    <string name="learn_how_to_use_toolbar_title">Learn How To Use</string>
+    <string name="learn_how_to_use_toolbar_sub_title">Learn How To Use Screen</string>
+    <!--=====================================AboutUsFragment=====================================-->
+    <string name="about_us_toolbar_title">About Us</string>
+    <string name="about_us_toolbar_sub_title">About Us Screen</string>
+    <!--====================================ContactUsFragment====================================-->
+    <string name="contact_us_toolbar_title">Contact Us</string>
+    <string name="contact_us_toolbar_sub_title">Contact Us Screen</string>
+
+    <string name="contact_us_label_chat_with_us">Chat With Us</string>
+    <!--================================TermAndConditionsFragment================================-->
+    <string name="terms_and_condition_toolbar_title">Terms &amp; Conditions</string>
+    <string name="terms_and_condition_toolbar_sub_title">Terms &amp; Conditions Screen</string>
+    <!--===================================PrivacyPolicyFragment=================================-->
+    <string name="privacy_policy_toolbar_title">Privacy Policy</string>
+    <string name="privacy_policy_toolbar_sub_title">Privacy Policy Screen</string>
+    <!--===============================TermsConditionsFragment===================================-->
+    <string name="share_toolbar_title">Share</string>
+    <string name="share_sub_title">Share Screen</string>
+    <!--========================================LeadsFragment====================================-->
+    <string name="leads_toolbar_title">Leads</string>
+    <string name="leads_toolbar_sub_title">Leads Screen</string>
+
+    <string name="leads_toolbar_label_order_id">Order ID -&#160;</string>
+    <string name="leads_toolbar_label_schedule">Schedule</string>
+    <string name="leads_toolbar_label_credits_spend">Credits Spend</string>
+    <string name="leads_toolbar_label_waiting_for_response">Waiting for response</string>
+    <string name="leads_toolbar_label_you_have_got_final_offer">You have got final offer</string>
+
+    <string name="leads_button_message">Message</string>
+    <string name="leads_button_call">Call</string>
+    <string name="leads_button_get_direction">Get Direction</string>
+    <string name="leads_button_accept">Accept</string>
+    <string name="leads_button_reject">Reject</string>
+    <string name="leads_button_start">Start</string>
+    <string name="leads_button_bid_for_this_job">Bid for this Job</string>
+
+    <!--=================================SendBillModalBottomSheet================================-->
+    <string name="send_bill_label_bill_details">Bill Details</string>
+    <string name="send_bill_label_total_mrp">Total MRP</string>
+    <string name="send_bill_label_coupon_discount">Coupon Discount</string>
+    <string name="send_bill_label_convenience_fee">Convenience Fee</string>
+    <string name="send_bill_label_free">Free</string>
+    <string name="send_bill_label_tax_charges">Tax &amp; Charges</string>
+    <string name="send_bill_label_bill_total">Bill total</string>
+
+    <string name="send_bill_hint_give_final_rate">Give Final Rate</string>
+    <string name="send_bill_hint_description">Description</string>
+
+    <string name="send_bill_error_give_final_rate_one">Please enter final rate</string>
+    <string name="send_bill_error_description_one">Please enter description</string>
+
+    <string name="send_bill_button_send_rates">Send Rates</string>
+    <!--=================================LeadOTPModalBottomSheet================================-->
+    <string name="lead_otp_label_otp">One Time Password (OTP)</string>
+    <string name="lead_otp_label_wait_for_user_to_pay_or_share_the_otp">Wait for User to Pay or Share the OTP</string>
+
+    <string name="lead_otp_button_submit">Submit</string>
+    <!--======================================WalletFragment=====================================-->
+    <string name="wallet_toolbar_title">Wallet</string>
+    <string name="wallet_toolbar_sub_title">Wallet Screen</string>
+    <!--=====================================ProfileFragment=====================================-->
+    <string name="profile_toolbar_title">Profile</string>
+    <string name="profile_toolbar_sub_title">Profile Screen</string>
+    <!--==================================LeadDetailsActivity====================================-->
+    <string name="lead_details_toolbar_title">Details</string>
+    <string name="lead_details_toolbar_sub_title">Details Screen</string>
+
+    <string name="lead_details_toolbar_label_order_id">Order ID -</string>
+    <string name="lead_details_toolbar_label_schedule">Schedule</string>
+    <string name="lead_details_toolbar_label_credits_spend">Credits Spend</string>
+    <string name="lead_details_toolbar_label_waiting_for_response">Waiting for response</string>
+    <string name="lead_details_toolbar_label_service_details">Service Details</string>
+
+    <string name="lead_details_button_message">Message</string>
+    <string name="lead_details_button_call">Call</string>
+    <string name="lead_details_button_get_direction">Get Direction</string>
+    <string name="lead_details_button_accept">Accept</string>
+    <string name="lead_details_button_reject">Reject</string>
+    <string name="lead_details_button_start">Start</string>
+    <string name="lead_details_button_bid_for_this_job">Bid for this Job</string>
+    <!--===================================ChatActivity==================================-->
+    <string name="chat_toolbar_title">Chat</string>
+    <string name="chat_toolbar_sub_title">Chat Screen</string>
+
+    <string name="chat_label_write_a_message">Write a Message</string>
+
+    <string name="chat_button_send_final_offer">Send Final Offer</string>
+    <!--===================================SingleSelectDialog====================================-->
+    <string name="single_select_dialog_toolbar_title">Single Select</string>
+    <string name="single_select_dialog_toolbar_sub_title">Single Select Screen</string>
+
+    <string name="single_select_dialog_label_search">Search</string>
+
+    <string name="single_select_dialog_button_done">Done</string>
+    <!--===================================MultiSelectDialog=====================================-->
+    <string name="multi_select_dialog_toolbar_title">Multi Select</string>
+    <string name="multi_select_dialog_toolbar_sub_title">Multi Select Screen</string>
+
+    <string name="multi_select_dialog_label_search">Search</string>
+
+    <string name="multi_select_dialog_button_done">Done</string>
+    <!--===================================AutoCompletePlacePickerDialog=====================================-->
+    <string name="auto_complete_place_picker_dialog_toolbar_title">Auto Complete Place Picker</string>
+    <string name="auto_complete_place_picker_dialog_toolbar_sub_title">Auto Complete Place Picker Screen</string>
+
+    <string name="auto_complete_place_picker_dialog_label_search">Search area region</string>
+    <!--========================================Common===========================================-->
+    <string name="something_went_wrong_please_try_again">Something went wrong, please try again</string>
+    <string name="error_while">An error occurred while initializing the player. Please try again.</string>
+    <string name="please_wait">Please Wait</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="final_amount">Final Amount :&#160;</string>
+    <string name="message">Message :&#160;</string>
+
+</resources>

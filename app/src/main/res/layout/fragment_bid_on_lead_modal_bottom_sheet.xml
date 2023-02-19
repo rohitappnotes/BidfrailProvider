@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bidAmountTextInputLayout"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontalTopRoot"
+        app:startIconCheckable="true"
+        app:startIconDrawable="@drawable/ic_rupee_symbol"
+        app:startIconTint="#605D66">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bidAmountTextInputEditText"
+            style="@style/TextInputEditText"
+            android:hint="Bid Amount"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/messageTextInputLayout"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:endIconMode="clear_text"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@+id/bidAmountTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/messageTextInputEditText"
+            style="@style/TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="Message (optional)"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="6"
+            android:minLines="3"
+            android:scrollHorizontally="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendBidMaterialButton"
+        style="@style/SmallRoundedButton_Red"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Send Bid"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontalBottomRoot"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalEndRoot"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVerticalStartRoot"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextInputLayout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalTopRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontalBottomRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStartRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_10sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEndRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_10sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

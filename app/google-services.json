@@ -1,0 +1,202 @@
+{
+  "project_info": {
+    "project_number": "690683013331",
+    "firebase_url": "https://bidfrail-firebase-default-rtdb.firebaseio.com",
+    "project_id": "bidfrail-firebase",
+    "storage_bucket": "bidfrail-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690683013331:android:dab28aef575434c7120c26",
+        "android_client_info": {
+          "package_name": "com.bidfrail.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690683013331-1uceuldl1to2ukbl6fblg1galp15ue3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.android",
+            "certificate_hash": "cf1fdb49b4847762892a36bac1c133404a6446b7"
+          }
+        },
+        {
+          "client_id": "690683013331-2e2uve8dt1nk9b26td744vrmqqekfdgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.android",
+            "certificate_hash": "d5e186aa02d4ad70d565c86db73d3b316b1f29e6"
+          }
+        },
+        {
+          "client_id": "690683013331-imatko1kh987ur3f7vrc2ck9gle38u9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.android",
+            "certificate_hash": "1cf07fd16f90bc26ebbef7f150a7c67322f06e06"
+          }
+        },
+        {
+          "client_id": "690683013331-md58k4rc96ncuqeo7f9l7j2kkuvul0ia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.android",
+            "certificate_hash": "7fc0e8adf460437176208d28abdfd24dfb97d876"
+          }
+        },
+        {
+          "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXbClg0puwqG5AN3vewMMvdJk2Ky0jbng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "690683013331-2en2a1k0bph3jgu1sk3akda5u3cmbck5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bid.frail.user",
+                "app_store_id": "1616269621"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690683013331:android:8cd67f611facd013120c26",
+        "android_client_info": {
+          "package_name": "com.bidfrail.presswala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690683013331-6m7j2sj28ldpfftsvmbfac3rqqu63amh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.presswala",
+            "certificate_hash": "d5e186aa02d4ad70d565c86db73d3b316b1f29e6"
+          }
+        },
+        {
+          "client_id": "690683013331-chkss5ha0uk3ipmfk9gh2okm04g2sgnc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.presswala",
+            "certificate_hash": "1cf07fd16f90bc26ebbef7f150a7c67322f06e06"
+          }
+        },
+        {
+          "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXbClg0puwqG5AN3vewMMvdJk2Ky0jbng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "690683013331-2en2a1k0bph3jgu1sk3akda5u3cmbck5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bid.frail.user",
+                "app_store_id": "1616269621"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690683013331:android:1425e95f87983fba120c26",
+        "android_client_info": {
+          "package_name": "com.bidfrail.provider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690683013331-b8eeg75qs9lmlpkisd5494jbudoch6im.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.provider",
+            "certificate_hash": "d5e186aa02d4ad70d565c86db73d3b316b1f29e6"
+          }
+        },
+        {
+          "client_id": "690683013331-ctb8i007vqvhi60d74tot7kqkelbjvbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.provider",
+            "certificate_hash": "3bb297a428eb940ed994de1e2bcbc1bd1dfd12cf"
+          }
+        },
+        {
+          "client_id": "690683013331-i6tjbbun45n7rg8c37ot9gelsf9gbp49.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.provider",
+            "certificate_hash": "e6aa0e48e5728f24af7fce874c67d5cce3502fe9"
+          }
+        },
+        {
+          "client_id": "690683013331-n9niaa0ec67c16v1ikm40mq4m46k65gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bidfrail.provider",
+            "certificate_hash": "1cf07fd16f90bc26ebbef7f150a7c67322f06e06"
+          }
+        },
+        {
+          "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXbClg0puwqG5AN3vewMMvdJk2Ky0jbng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690683013331-5rbevl3iqfm69dmdu4362r2i7q79mkur.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "690683013331-2en2a1k0bph3jgu1sk3akda5u3cmbck5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bid.frail.user",
+                "app_store_id": "1616269621"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

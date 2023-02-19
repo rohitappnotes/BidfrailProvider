@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/activity_after_login_app_bar" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/leftNavigationView"
+        style="@style/LeftNavigationViewStyle"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/activity_after_login_nav_drawer_header"
+        app:itemHorizontalPadding="@dimen/_10sdp"
+        app:itemVerticalPadding="@dimen/_5sdp"
+        app:menu="@menu/activity_navigation_host_left_navigation_drawer_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutMaterialButton"
+                style="@style/RoundedButton_Icon_Red"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="start|center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:text="@string/after_login_left_nav_drawer_logout"
+                android:textAllCaps="true"
+                android:textAppearance="@style/BoldFont16"
+                app:icon="@drawable/ic_black_right_arrow"
+                app:iconGravity="end"
+                app:iconPadding="@dimen/_5sdp"
+                app:iconSize="@dimen/_30sdp"
+                app:iconTint="@null" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

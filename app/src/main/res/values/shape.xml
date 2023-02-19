@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ====================================TextInputLayout==================================== -->
+    <style name="cornerCut_TextInputLayout" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+    </style>
+
+    <style name="cornerRounded_TextInputLayout" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+    </style>
+    <!-- =========================================Button======================================== -->
+    <style name="cornerSmallRounded_Button" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="cornerRounded_Button" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+</resources>

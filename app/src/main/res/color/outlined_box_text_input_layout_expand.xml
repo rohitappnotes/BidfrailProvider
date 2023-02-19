@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:alpha="0"
+        android:color="@color/boxStrokeFocusedColor_TextInputLayout"
+        android:state_focused="true" />
+
+    <!-- focused -->
+    <item
+        android:alpha="0"
+        android:color="@color/boxStrokeFocusedColor_TextInputLayout"
+        android:state_hovered="true" />
+
+    <!-- disable -->
+    <item
+        android:alpha="0"
+        android:color="@color/boxStrokeDisabledColor_TextInputLayout"
+        android:state_enabled="false" />
+
+    <!-- normal -->
+    <item
+        android:alpha="0"
+        android:color="@color/boxStrokeNormalColor_TextInputLayout" />
+</selector>

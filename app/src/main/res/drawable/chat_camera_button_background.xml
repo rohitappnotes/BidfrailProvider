@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape
+                    android:shape="oval">
+
+                    <solid
+                        android:color="@color/colorChatCameraButtonPressed" />
+
+                    <stroke
+                        android:color="@color/colorChatCameraButtonPressed"
+                        android:width="@dimen/_1sdp"/>
+
+                    <padding
+                        android:bottom="0dp"
+                        android:left="0dp"
+                        android:right="0dp"
+                        android:top="0dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item>
+                <shape
+                    android:shape="oval">
+
+                    <solid
+                        android:color="@color/colorChatCameraButtonUnPressed" />
+
+                    <stroke
+                        android:color="@color/colorChatCameraButtonUnPressed"
+                        android:width="@dimen/_1sdp"/>
+
+                    <padding
+                        android:bottom="0dp"
+                        android:left="0dp"
+                        android:right="0dp"
+                        android:top="0dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

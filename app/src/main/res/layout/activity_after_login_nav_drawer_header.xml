@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/navigationIconImageView"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:padding="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:src="@drawable/ic_gray_left_arrow" />
+
+    <com.library.shadowcardview.ShadowCardView
+        android:id="@+id/shadowCardViewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornersRadius="4dp"
+        app:shadowBottomHeight="8dp"
+        app:shadowColor="#D0CECE"
+        app:shadowLeftHeight="8dp"
+        app:shadowRightHeight="8dp"
+        app:shadowTopHeight="8dp">
+
+        <RelativeLayout
+            android:id="@+id/profileRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp">
+
+            <com.library.utilities.customview.CircleImageView
+                android:id="@+id/profilePictureCircleImageView"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/user_placeholder"
+                app:civ_border_color="@color/black"
+                app:civ_border_overlay="true"
+                app:civ_border_width="@dimen/_1sdp" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/editImageView"
+                android:layout_toEndOf="@+id/profilePictureCircleImageView"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:textAppearance="@style/BoldFont10"
+                android:textColor="@color/black"
+                tools:text="Rohit Yadav" />
+
+            <ImageView
+                android:id="@+id/editImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_edit_profile" />
+        </RelativeLayout>
+    </com.library.shadowcardview.ShadowCardView>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Badge count text colors -->
+    <color name="badgeBorderColor">#FFFFFF</color>
+    <color name="badgeInsideColor">#FF0000</color>
+
+    <color name="shimmer_color">#a2878787</color>
+</resources>

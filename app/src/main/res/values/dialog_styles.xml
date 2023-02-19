@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Dynamic_Dialog_Default_Style" parent="@style/Theme.AppCompat.Dialog">
+        <!--Window background color is transparent-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!--Whether floating on the interface-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+
+        <!-- Whether the background is allowed to darken --> <!-- Whether the background is blurred -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/UpDownAnimation</item>
+
+        <!--Is there a title-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTitleStyle">@null</item>
+
+        <!--Is it semi-transparent?-->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="SingleSelectDialog" parent="@style/Theme.AppCompat.Dialog">
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <!--After 6.0, you can set the Dark & Light mode for statusBar text black (true) or white (false)-->
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+
+        <!--After 5.0, you can set the color of the status bar-->
+        <item name="android:statusBarColor">@color/colorMultiSelectDialogStatusBar</item>
+        <item name="colorPrimaryVariant">@color/colorMultiSelectDialogStatusBar</item>
+
+        <!-- Used for the background -->
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="MultiSelectDialog" parent="@style/Theme.AppCompat.Dialog">
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <!--After 6.0, you can set the Dark & Light mode for statusBar text black (true) or white (false)-->
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+
+        <!--After 5.0, you can set the color of the status bar-->
+        <item name="android:statusBarColor">@color/colorSingleSelectDialogStatusBar</item>
+        <item name="colorPrimaryVariant">@color/colorSingleSelectDialogStatusBar</item>
+
+        <!-- Used for the background -->
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="AutoCompletePlacePickerDialog" parent="@style/Theme.AppCompat.Dialog">
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <!--After 6.0, you can set the Dark & Light mode for statusBar text black (true) or white (false)-->
+        <item name="android:windowLightStatusBar" tools:targetApi="M">false</item>
+
+        <!--After 5.0, you can set the color of the status bar-->
+        <item name="android:statusBarColor">@color/colorAutoCompletePlacePickerDialogStatusBar</item>
+        <item name="colorPrimaryVariant">@color/colorAutoCompletePlacePickerDialogStatusBar</item>
+
+        <!-- Used for the background -->
+        <item name="android:background">#FFFFFF</item>
+    </style>
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_80sdp">
+
+    <LinearLayout
+        android:id="@+id/incomingTextLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/incomingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_incoming_message_background"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Hi, How are you?"
+            android:textAppearance="@style/RegularFont10"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/incomingTextDateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="28 December 2021 12:47 pm"
+            android:textAppearance="@style/RegularFont8"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incomingImageLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/chat_incoming_message_background"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/incomingImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@color/placeholder" />
+
+            <ProgressBar
+                android:id="@+id/imageLoadingProgressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/incomingImageDateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="28 December 2021 12:47 pm"
+            android:textAppearance="@style/RegularFont8"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incomingAudioLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/incomingAudioRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_incoming_message_background"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/incomingAudioPlayStopImageView"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/chat_ic_play"
+                android:tag="ic_play" />
+
+            <SeekBar
+                android:id="@+id/incomingAudioSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/incomingAudioDurationTextView"
+                android:layout_toEndOf="@+id/incomingAudioPlayStopImageView"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="#C20114"
+                android:thumbTint="#C20114" />
+
+            <TextView
+                android:id="@+id/incomingAudioDurationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textAppearance="@style/RegularFont8"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/incomingAudioDateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="28 December 2021 12:47 pm"
+            android:textAppearance="@style/RegularFont8"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</RelativeLayout>

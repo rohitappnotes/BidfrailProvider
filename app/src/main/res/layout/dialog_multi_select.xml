@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/multiSelectCustomAppBarRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMultiSelectDialogToolbarBackground"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/multiSelectNavigationIconImageView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/multi_select_ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/multiSelectTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/multiSelectNavigationIconImageView"
+            android:clickable="true"
+            android:focusable="true"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/multi_select_dialog_toolbar_title"
+            android:textAppearance="@style/MediumFont16"
+            android:textColor="@color/colorMultiSelectDialogToolbarTitle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/multiSelectSearchBarRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@drawable/multi_select_search_bar_background"
+        android:minHeight="@dimen/_40sdp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiSelectCustomAppBarRelativeLayout">
+
+        <ImageView
+            android:id="@+id/multiSelectSearchImageView"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/multi_select_ic_search"
+            app:tint="#000000" />
+
+        <EditText
+            android:id="@+id/multiSelectSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/multiSelectSearchImageView"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/multi_select_dialog_label_search"
+            android:inputType="textMultiLine"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:textAppearance="@style/RegularFont10"
+            android:textColor="#000000"
+            tools:ignore="Autofill" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/multiSelectRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/multiSelectDoneButtonTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiSelectSearchBarRelativeLayout"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:itemCount="2"
+        tools:listitem="@layout/dialog_multi_select_item" />
+
+    <TextView
+        android:id="@+id/multiSelectDoneButtonTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorMultiSelectDialogDoneButton"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="@string/multi_select_dialog_button_done"
+        android:textAppearance="@style/MediumFont20"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/left_nav_drawer_nav_home"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_home"
+            android:title="@string/after_login_left_nav_drawer_menu_home" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_completed_orders"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_completed_orders"
+            android:title="@string/after_login_left_nav_drawer_menu_completed_orders"/>
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_learn_how_to_use"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_about_us"
+            android:title="@string/after_login_left_nav_drawer_menu_learn_how_to_use" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_about_us"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_about_us"
+            android:title="@string/after_login_left_nav_drawer_menu_about_us" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_contact_us"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_contact_us"
+            android:title="@string/after_login_left_nav_drawer_menu_contact_us" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_terms_and_conditions"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_about_us"
+            android:title="@string/after_login_left_nav_drawer_menu_terms_and_conditions" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_privacy_policy"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_about_us"
+            android:title="@string/after_login_left_nav_drawer_menu_privacy_policy" />
+
+        <item
+            android:id="@+id/left_nav_drawer_nav_share"
+            android:checked="true"
+            android:icon="@drawable/ic_left_nav_drawer_share"
+            android:title="@string/after_login_left_nav_drawer_menu_share" />
+    </group>
+</menu>

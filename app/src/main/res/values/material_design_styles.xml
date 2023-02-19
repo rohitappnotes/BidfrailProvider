@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- ====================================TextInputLayout==================================== -->
+    <style name="HintTextAppearance" parent="@style/MediumFont12" />
+
+    <style name="prefixTextAppearance" parent="@style/MediumFont12" />
+
+    <style name="placeholderTextAppearance" parent="@style/MediumFont12" />
+
+    <style name="suffixTextAppearance" parent="@style/MediumFont12" />
+
+    <style name="HelperTextAppearance" parent="@style/MediumFont10" />
+
+    <style name="CounterTextAppearance" parent="@style/MediumFont10" />
+
+    <style name="counterOverflowTextAppearance" parent="@style/MediumFont10" />
+
+    <style name="ErrorTextAppearance" parent="@style/MediumFont10" />
+
+    <!--cursor bubble-->
+    <style name="CursorBubble" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorControlActivated">@color/colorCursorBubble</item>
+    </style>
+
+    <style name="TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- hint padding from top (notes in filled box) -->
+        <item name="boxCollapsedPaddingTop">0dp</item>
+
+        <!-- box stroke -->
+        <item name="boxStrokeColor">@color/outlined_box_text_input_layout</item>
+        <item name="boxStrokeWidth">@dimen/_1sdp</item>
+        <item name="boxStrokeWidthFocused">@dimen/_1sdp</item>
+
+        <!-- box corner -->
+        <item name="boxCornerRadiusTopStart">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_4sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_4sdp</item>
+
+        <!-- box background -->
+        <item name="boxBackgroundColor">@color/boxBackgroundColor_TextInputLayout</item>
+
+        <!--hint-->
+        <item name="android:textColorHint">@color/hintInactiveColor_TextInputLayout</item>  <!-- The color of the label in all other text field states (such as resting and disabled) -->
+        <item name="hintTextColor">@color/hintActiveColor_TextInputLayout</item> <!-- The color of the label when it is collapsed and the text field is active -->
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+
+        <!--prefix-->
+        <item name="prefixTextColor">@color/prefixColor_TextInputLayout</item>
+        <item name="prefixTextAppearance">@style/prefixTextAppearance</item>
+
+        <!--placeholder-->
+        <item name="placeholderTextColor">@color/placeholderColor_TextInputLayout</item>
+        <item name="placeholderTextAppearance">@style/placeholderTextAppearance</item>
+
+        <!--suffix-->
+        <item name="suffixTextColor">@color/suffixColor_TextInputLayout</item>
+        <item name="suffixTextAppearance">@style/suffixTextAppearance</item>
+
+        <!--helper-->
+        <item name="helperTextTextColor">@color/helperColor_TextInputLayout</item>
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+
+        <!--counter-->
+        <item name="counterTextColor">@color/counterColor_TextInputLayout</item>
+        <item name="counterTextAppearance">@style/CounterTextAppearance</item>
+
+        <!--counter Overflow-->
+        <item name="counterOverflowTextColor">@color/counterOverflowColor_TextInputLayout</item>  <!-- text counter color after more then maximum-->
+        <item name="counterOverflowTextAppearance">@style/counterOverflowTextAppearance</item>
+
+        <!--error-->
+        <item name="boxStrokeErrorColor">@color/colorError</item> <!-- box border color -->
+        <item name="errorTextColor">@color/colorError</item>
+        <item name="errorTextAppearance">@style/ErrorTextAppearance</item>
+        <item name="errorIconTint">@color/colorError</item> <!-- error icon color -->
+        <item name="errorIconDrawable">@null</item>
+
+        <!--end icon-->
+        <item name="endIconTint">@color/colorEndIcon_TextInputLayout</item>
+
+        <!--start icon-->
+        <item name="startIconTint">@color/colorStartIcon_TextInputLayout</item>
+
+        <!--password icon-->
+        <item name="passwordToggleTint">@color/colorStartIcon_TextInputLayout</item>
+
+        <!--cursor bubble-->
+        <item name="materialThemeOverlay">@style/CursorBubble</item>
+    </style>
+    <!-- ===================================TextInputEditText=================================== -->
+    <style name="TextInputEditTextTextAppearance" parent="@style/MediumFont12" />
+
+    <style name="TextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:textAppearance">@style/TextInputEditTextTextAppearance</item>
+        <item name="android:textColor">@color/colorText_TextInputEditText</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+        <item name="android:textColorHint">@color/colorHint_TextInputEditText</item>
+
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+    <!-- ==================================ExposedDropdownMenu================================== -->
+
+    <!-- =========================================Button======================================== -->
+    <!--red buttons-->
+    <!--Button-->
+    <style name="SmallRoundedButton_Red" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="rippleColor">@color/colorRedButton_Pressed</item>
+        <item name="backgroundTint">@color/colorRedButton_UnPressed</item>
+        <item name="android:textColor">@color/colorRedButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Red" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="rippleColor">@color/colorRedButton_Pressed</item>
+        <item name="backgroundTint">@color/colorRedButton_UnPressed</item>
+        <item name="android:textColor">@color/colorRedButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.Icon-->
+    <style name="SmallRoundedButton_Icon_Red" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorRedButton_Pressed</item>
+        <item name="backgroundTint">@color/colorRedButton_UnPressed</item>
+        <item name="android:textColor">@color/colorRedButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Icon_Red" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorRedButton_Pressed</item>
+        <item name="backgroundTint">@color/colorRedButton_UnPressed</item>
+        <item name="android:textColor">@color/colorRedButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.OutlinedButton-->
+    <style name="SmallRoundedButton_Outlined_Red" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/colorRedButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorRedButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorRedButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Outlined_Red" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/colorRedButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorRedButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorRedButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.OutlinedButton.Icon-->
+    <style name="SmallRoundedButton_Outlined_Icon_Red" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="rippleColor">@color/colorRedButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorRedButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorRedButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Outlined_Icon_Red" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="rippleColor">@color/colorRedButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorRedButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorRedButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--green buttons-->
+    <!--Button-->
+    <style name="SmallRoundedButton_Green" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="rippleColor">@color/colorGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Green" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="rippleColor">@color/colorGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.Icon-->
+    <style name="SmallRoundedButton_Icon_Green" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Icon_Green" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.OutlinedButton-->
+    <style name="SmallRoundedButton_Outlined_Green" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/colorGreenButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorGreenButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Outlined_Green" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/colorGreenButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorGreenButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--Button.OutlinedButton.Icon-->
+    <style name="SmallRoundedButton_Outlined_Icon_Green" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="rippleColor">@color/colorGreenButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorGreenButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="RoundedButton_Outlined_Icon_Green" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="rippleColor">@color/colorGreenButton_Outlined_Pressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Outlined_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/colorGreenButton_Outlined_Stroke</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Message_Button" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconGravity">textStart</item>
+        <item name="icon">@drawable/ic_message_to</item>
+        <item name="iconPadding">@dimen/_5sdp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="Call_Button" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon">
+        <item name="rippleColor">@color/colorParakeetGreenButton_Pressed</item>
+        <item name="backgroundTint">@color/colorParakeetGreenButton_UnPressed</item>
+        <item name="android:textColor">@color/colorParakeetGreenButton_Text</item>
+        <item name="android:textAppearance">@style/MediumFont12</item>
+        <item name="shapeAppearance">@style/cornerSmallRounded_Button</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconGravity">textStart</item>
+        <item name="icon">@drawable/ic_call_to</item>
+        <item name="iconPadding">@dimen/_5sdp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+    <!-- ===================================BottomNavigation==================================== -->
+    <style name="BottomNavigationView.ItemTextAppearanceInactive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="BottomNavigationView.ItemTextAppearanceActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="BottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="itemBackground">@null</item>
+        <item name="itemTextColor">@color/bottom_navigation_item_text_selector</item>
+        <item name="itemIconTint">@color/bottom_navigation_item_icon_selector</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView.ItemTextAppearanceActive</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView.ItemTextAppearanceInactive</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconSize">20dp</item>
+    </style>
+    <!-- ===================================Left Navigation Drawer==================================== -->
+    <style name="LeftNavigationView.ItemTextAppearanceInactive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="LeftNavigationView.ItemTextAppearanceActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="LeftNavigationViewStyle" parent="Widget.Design.NavigationView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="itemBackground">@null</item>
+        <item name="itemTextColor">@color/left_navigation_view_item_text_selector</item>
+        <item name="itemIconTint">@color/left_navigation_view_item_icon_selector</item>
+        <item name="itemTextAppearanceActive">@style/LeftNavigationView.ItemTextAppearanceActive</item>
+        <item name="itemTextAppearanceInactive">@style/LeftNavigationView.ItemTextAppearanceInactive</item>
+        <item name="itemIconSize">45dp</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModel</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:navigationBarDividerColor" tools:targetApi="o_mr1">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <style name="BottomSheetModel" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background_with_indicator</item>
+    </style>
+</resources>
